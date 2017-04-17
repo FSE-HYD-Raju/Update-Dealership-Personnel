@@ -1,0 +1,101 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+}
+a:link {
+    text-decoration: none;
+}
+
+.navbar {
+    margin-bottom: 0;
+    border-radius: 0;
+}
+.row.content {height: 450px}
+.sidenav {
+    padding-top: 0px;
+    background-color: #f1f1f1;
+    height: 100%;
+}
+.container{
+    margin-top: 2%;
+    margin-left: 18%;
+}
+
+/* On small screens, set height to 'auto' for sidenav and grid */
+@media screen and (max-width: 767px) {
+    .sidenav {
+        height: auto;
+        padding: 15px;
+    }
+    .row.content {height:auto;}
+}
+.addEmployeeForm{
+    margin-top: 2%;
+}
+.addEmployeebtn {
+    margin-top: 0%;
+    margin-left: 60%;
+}
+.updateEmployeebtn{
+    margin-top: -2%;
+    margin-left: 85%;
+}
+.deleteEmployeebtn{
+    margin-left: 85%;
+    margin-top: 0%;
+}
+.jobroletable{
+    width: 60%;
+    margin-left: 20%;
+    margin-top: 1%;
+}
+
+.searchpane {
+    width: 40%;
+    margin-left: 28%;
+}
+.typeahead-demo .custom-popup-wrapper {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: none;
+    background-color: #f9f9f9;
+}
+
+.typeahead-demo .custom-popup-wrapper > .message {
+    padding: 10px 20px;
+    border-bottom: 1px solid #ddd;
+    color: #868686;
+}
+
+.typeahead-demo .custom-popup-wrapper > .dropdown-menu {
+    position: static;
+    float: none;
+    display: block;
+    min-width: 50px;
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+

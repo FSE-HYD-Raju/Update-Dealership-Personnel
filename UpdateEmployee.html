@@ -1,0 +1,55 @@
+
+<div class='container-fluid'>
+    <input autofocus type="text" ng-model="asyncSelected" placeholder="Type Control or Last name - Case sensitive"
+           uib-typeahead="employees as (employees.Control + ' - ' + employees.FirstName + ' ' + employees.LastName) for employees in getLocation($viewValue)"
+
+           typeahead-loading="loadingEmployees"
+           typeahead-min-length="3"
+           typeahead-wait-ms="200"
+           typeahead-on-select="useSelected($item, $model, $label)"
+           typeahead-no-results="noResults" class="form-control searchpane">
+    <i ng-show="loadingEmployees" class="glyphicon glyphicon-refresh"></i>
+    <div ng-show="noResults">
+        <i class="glyphicon glyphicon-remove"></i> No Results Found
+    </div>
+
+
+</div>
+<div>
+    <!--<fieldset>-->
+    <!--<legend>Job Role</legend>-->
+    <table class="table table-bordered jobroletable">
+        <tr>
+            <th colspan="2" class="text-center"><h2>Job Role</h2></th>
+        </tr>
+        <tr>
+            <td><input id="spCheckBox" type="checkbox" ng-click="checkBoxClicked()" ng-model="roleCheckbox.isSalesPerson"/></td>
+            <td>Sales Person - {{roleCheckbox.isSalesPerson}}</td>
+        </tr>
+        <tr>
+            <td><input id="smCheckBox" type="checkbox" ng-click="checkBoxClicked()" ng-model="roleCheckbox.isSalesManager"/></td>
+            <td>Sales Manager - {{roleCheckbox.isSalesManager}}</td>
+        </tr>
+        <tr>
+            <td><input id="fiCheckBox" type="checkbox" ng-click="checkBoxClicked()" ng-model="roleCheckbox.isFandIManager"/></td>
+            <td>F&I Manager - {{roleCheckbox.isFandIManager}}</td>
+        </tr>
+        <tr>
+            <td><input id="cmCheckBox" type="checkbox" ng-click="checkBoxClicked()" ng-model="roleCheckbox.isClosingManager"/></td>
+            <td>Closing Manager - {{roleCheckbox.isClosingManager}}</td>
+        </tr>
+        <tr>
+            <td><input id="bcCheckBox" type="checkbox" ng-click="checkBoxClicked()" ng-model="roleCheckbox.isBillingClerk"/></td>
+            <td>Billing Clerk - {{roleCheckbox.isBillingClerk}}</td>
+        </tr>
+        <tr>
+            <td><input id="dcCheckBox" type="checkbox" ng-click="checkBoxClicked()" ng-model="roleCheckbox.isDeliveryCoordinator"/></td>
+            <td>Delivery Coordinator - {{roleCheckbox.isDeliveryCoordinator}}</td>
+        </tr>
+    </table>
+
+    <!--</fieldset>-->
+</div>
+<div class="col-xs-4 updateEmployeebtn">
+    <button type="submit" class="btn btn-primary btn-md">Update Employee</button>
+</div>
