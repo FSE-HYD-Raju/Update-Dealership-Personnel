@@ -1,0 +1,24 @@
+<div ng-controller="ShowEmployeeController">
+    <label for="ex1">Enter Employee ID</label>
+    <input class="form-control" id="ex1" type="text" name="fname" ng-model="EMPID" placeholder="firstname">
+<button type="submit" class="btn btn-primary btn-md" ng-click="GetData(EMPID)" >Get Data</button>
+    <div >
+        <dl class="dl-horizontal">
+            <dt>SSN:{{Data.SSN}}</dt>
+            <dt>Control No:{{Data.HostItemID}}</dt>
+            <dt>First Name : {{Data.FirstName}}</dt>
+            <dt>Last Name : {{Data.LastName}}</dt>
+            <dt>Gender:{{Data.Gender}}</dt>
+            <dt>Address : {{Data.Address}}</dt>
+            <dt>Date Of Birth: {{Data.Birthdate}}</dt>
+            <dt>BusinessPhone:{{Data.BusinessPhone}}</dt>
+            <dt>City:{{Data.City}}</dt>
+            <dt>Country:{{Data.Country}}</dt>
+            <dt>County:{{Data.County}}</dt>
+            <dt>Added Date:{{Data.DateAdded}}</dt>
+        </dl>
+    </div>
+
+</div>
+
+

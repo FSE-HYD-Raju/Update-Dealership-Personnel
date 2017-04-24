@@ -6,19 +6,24 @@ App.config(['$routeProvider',
     function ($routeProvider) {
         $routeProvider
             .when('/home', {
-                templateUrl: 'home.html',
+                templateUrl: 'Views/home.html',
+
+            })
+            .when('/ShowEmployee', {
+                templateUrl: 'Views/ShowEmployee.html',
 
             })
             .when('/AddEmployee', {
-                templateUrl: 'AddEmployee.html',
+                templateUrl: 'Views/AddEmployee.html',
+
             })
             .when('/updateEmployee', {
-                templateUrl: 'updateEmployee.html',
+                templateUrl: 'Views/updateEmployee.html',
 
             })
             .when('/DeleteEmployee', {
-                templateUrl: 'DeleteEmployee.html',
+                templateUrl: 'Views/DeleteEmployee.html',
 
             })
-            .otherwise({redirectTo : '/AddEmployee'})
+            .otherwise({redirectTo : 'Views/home'})
     }]);

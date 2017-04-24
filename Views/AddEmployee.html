@@ -1,0 +1,84 @@
+<div class="container-fluid" ng-controller="addEmployeeController">
+
+    <div class="form-group">
+        <div class="col-xs-3">
+            <label for="ex1">Enter Control No: </label>
+            <input class="form-control" id="ex" type="text" placeholder="Control no.." ng-model="ctrlno"><br>
+            <button type="submit" class="btn btn-default" ng-click="gotomainadd()">Submit</button>
+        </div>
+        <div class="col-xs-2 seperate"><h3 >Or</h3></div>
+        <div class="col-xs-3 generatectrl">
+            <button type="submit" class="btn btn-primary btn-md" ng-click="generate()">Generate a Control No</button>
+        </div>
+    </div>
+
+</div>
+
+<form>
+    <div class="form-group">
+        <div class="col-xs-4">
+            <label for="ex1">Control No</label>
+            <input class="form-control" readonly id="ex0" type="text" name="ctrlno" ng-src="" placeholder="">
+        </div>
+        <div class="col-xs-4">
+            <label for="ex1">First Name</label>
+            <input class="form-control" id="ex1" type="text" name="fname" placeholder="firstname">
+        </div>
+        <div class="col-xs-4">
+            <label for="ex2">Last Name</label>
+            <input class="form-control" id="ex2" type="text" name="lname" placeholder="lastname">
+        </div>
+        <div class="col-xs-4">
+            <label for="ex3">Email</label>
+            <input class="form-control" id="ex3" type="text" name="email" placeholder="email">
+        </div>
+        <div class="col-xs-4">
+            <label for="ex3">City</label>
+            <input class="form-control" id="ex4" type="text" name="city" placeholder="city">
+        </div>
+        <div class="col-xs-4">
+            <label for="ex3">ST / Province</label>
+            <input class="form-control" id="ex5" type="text" name="state" placeholder="state">
+        </div>
+        <div class="col-xs-4">
+            <label for="ex3">Zip / Postal</label>
+            <input class="form-control" id="ex6" type="text" name="zip" placeholder="zip">
+        </div>
+        <div class="col-xs-4">
+            <label for="ex3">County</label>
+            <input class="form-control" id="ex7" type="text" name="county" placeholder="county">
+        </div>
+        <div class="col-xs-4">
+            <label for="ex3">Country</label>
+            <input class="form-control" id="ex8" type="text" name="country" placeholder="country">
+        </div>
+
+        <div >
+            <!--<fieldset>-->
+            <!--<legend>Job Role</legend>-->
+                    <h2>  Job Roles </h2>
+                    <input id="spCheckBox" type="checkbox" ng-click="checkBoxClicked()" ng-model="roleCheckbox.isSalesPerson"/>
+                    <b>Sales Person - {{roleCheckbox.isSalesPerson}}</b><br>
+
+                    <input id="smCheckBox" type="checkbox" ng-click="checkBoxClicked()" ng-model="roleCheckbox.isSalesManager"/>
+                    <b>Sales Manager - {{roleCheckbox.isSalesManager}}</b><br>
+
+                    <input id="fiCheckBox" type="checkbox" ng-click="checkBoxClicked()" ng-model="roleCheckbox.isFandIManager"/>
+                    <b>F&I Manager - {{roleCheckbox.isFandIManager}}</b><br>
+
+                     <input id="cmCheckBox" type="checkbox" ng-click="checkBoxClicked()" ng-model="roleCheckbox.isClosingManager"/>
+                    <b>Closing Manager - {{roleCheckbox.isClosingManager}}</b><br>
+
+                    <input id="bcCheckBox" type="checkbox" ng-click="checkBoxClicked()" ng-model="roleCheckbox.isBillingClerk"/>
+                    <b>Billing Clerk - {{roleCheckbox.isBillingClerk}}</b><br>
+
+                    <input id="dcCheckBox" type="checkbox" ng-click="checkBoxClicked()" ng-model="roleCheckbox.isDeliveryCoordinator"/>
+                    <b>Delivery Coordinator - {{roleCheckbox.isDeliveryCoordinator}}</b><br>
+        </div>
+
+    <div class="col-xs-4 addEmployeebtn">
+            <button type="btn-save" class="btn btn-primary btn-md addEmployeebtn">Add Employee</button>
+    </div>
+
+    </div>
+</form>
